@@ -9,7 +9,7 @@ df = sc.parallelize([
     (217498, 100000182, 'A'), (217498, 100000197, 'B'), (217498, 100000210, 'B'),
     (854123, 100000005, 'A'), (854123, 100000007, 'A')
 ]).toDF(["user_id", "timestamp", "actions"])
-
+display(df)
 # COMMAND ----------
 
  display(df.rdd.map(lambda row: (row.user_id, row))
